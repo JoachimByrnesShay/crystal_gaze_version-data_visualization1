@@ -1,0 +1,80 @@
+:root {
+  --light-cyan: #d9f7fa;
+  --gainsboro: #d8ddde;
+  --light-gray: #cfcbca;
+  --grullo: #aba194;
+  --burnt-umber: #8c271e;
+}
+
+body {
+  margin: 0;
+  background: beige;
+  background: var(--light-gray);
+}
+
+main {
+  height: calc(100vh - 100px - 6px);
+}
+
+header > ul, footer > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+}
+
+header > ul > li {
+  background: lightblue;
+  padding: 1em;
+}
+
+header {
+  border-bottom: 3px solid black;
+  background: var(--grullo);
+  height: 50px;
+}
+
+.section-config {
+  display: flex;
+  justify-content: space-around;
+  height: 10em;
+  border: 1px solid black;
+}
+
+.section-config h2, .section-config h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.section-config div {
+  background: lightblue;
+  padding: .5em;
+  margin-bottom: 0em;
+}
+
+.section-config div option {
+  padding-left: 0.5em;
+}
+
+.section-config-conversions select {
+  height: 9em;
+}
+
+.section-config-show-comparisons ul {
+  list-style-type: none;
+  background: grey;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.
+footer {
+  border-top: 2px solid black;
+  height: 50px;
+  width: 100%;
+  background: --grullo;
+  border-bottom: 1px;
+}

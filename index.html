@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='css/styles.css' type='text/css' />
+</head>
+
+<body>
+    <header>
+        MY CURRENCIES
+        <div class='header-warning'></div>
+    </header>
+    <main>
+        <section class='section-config'>
+            <div class='section-config-base'>
+                <h2>Select your base currency</h2>
+                <select class='' onChange="changeBase();"></select>
+            </div>
+            <div class='section-config-conversions'>
+                <h2>Select up to 4 comparison currencies</h2>
+                <select multiple class='' onChange=""></select>
+            </div>
+            <div class='section-config-selections'>
+                <h3>Your base:</h3>
+                <h4 class='section-config-show-base'></h4>
+                <h3>Your comparisons:</h3>
+                <div class='section-config-show-comparisons'></div>
+            </div>
+        </section>
+        <section class='section-graphs'></section>
+    </main>
+    <footer>
+        <ul>
+            <li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+        </ul>
+    </footer>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
