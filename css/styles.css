@@ -41,7 +41,7 @@ header {
   border: 1px solid black;
 }
 
-.section-config h2, .section-config h3 {
+.section-config h2, .section-config h3, .section-config h4 {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -63,14 +63,63 @@ header {
 
 .section-config-show-comparisons ul {
   list-style-type: none;
-  background: grey;
+  background: lightyellow;
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.
+.section-config-show-base {
+  background: lightyellow;
+}
+
+.section-graphs {
+  height: 650px;
+  background: beige;
+  border-bottom: 3px solid black;
+  display: grid;
+  grid-template-rows: 1fr 15fr;
+  grid-template-columns: repeat(1fr);
+}
+
+.graphs-title {
+  display: flex;
+  background: grey;
+  justify-content: space-around;
+}
+
+.graphs-title p {
+  background: pink;
+  padding: .7em;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.graphs-graphing {
+  display: flex;
+  background: blue;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 30em;
+}
+
+.graphs-graphing div {
+  background: red;
+}
+
+.myBar {
+  background: green;
+}
+
+.warning-added {
+  background: red;
+  color: white;
+  padding: .5em;
+}
+
 footer {
   border-top: 2px solid black;
   height: 50px;
@@ -78,3 +127,33 @@ footer {
   background: --grullo;
   border-bottom: 1px;
 }
+
+.modal {
+  display: none;
+  background: white;
+  background-color: #eee;
+  border-radius: 2em;
+  border: 1px solid #aaa;
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  left: -20px;
+  /* margin-left: -150px;
+ */
+  top: 9em;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* .modal button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+ */
