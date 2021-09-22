@@ -128,6 +128,11 @@ footer {
   border-bottom: 1px;
 }
 
+/* inspiration and guidance on modal creation taken from 
+http://jsfiddle.net/kevalbhatt18/qwkzw3rg/127/ 
+pure javascript confirm box at https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options/30498126#30498126
+*/
+
 .modal {
   display: none;
   background: white;
@@ -135,18 +140,14 @@ footer {
   border-radius: 2em;
   border: 1px solid #aaa;
   position: absolute;
-  width: 100px;
-  height: 200px;
-  left: -20px;
-  /* margin-left: -150px;
- */
+  width: 150px;
+  height: 60px;
+  left: -45px;
   top: 9em;
   padding: 6px 8px 8px;
   box-sizing: border-box;
   text-align: center;
-}
-
-/* .modal button {
+  /* .modal button {
   background-color: #ccc;
   display: inline-block;
   border-radius: 3px;
@@ -157,3 +158,4 @@ footer {
   cursor: pointer;
 }
  */
+}

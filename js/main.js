@@ -6,34 +6,24 @@ let currency = { convertFrom: 'USD', convertTo: [], data: {} };
 
 function makeModalDiv(classStr) {
     let div = document.createElement('div');
-    let button = document.createElement('button');
-    // button.style.margin = '2em';
-    div.textContent = `${classStr}
-    ${currency.data.rates[classStr]}`;
-    // button.textContent = 'hi';
+    div.innerHTML = `1 ${currency.convertFrom} =<br>${currency.data.rates[classStr]} ${classStr}`;
     div.classList.add('modal', classStr);
-    // button.classList.add('modal-btn');
-    // div.appendChild(button);
-
     return div;
 
 }
 
 function showModal(div) {
-
-    div.style.display = "block"; //this is the replace of this line
-
+    div.style.display = "block";
     div.onmouseout = function() {
-        // Do your delete operation
         div.style.display = 'none';
     };
-
 }
 
 fetchAPIData();
 
 /* fetch functions */
 function fetchCurrencyData() {
+    console.log(currency['convertFrom']);
     let requestedURL = `${requestURL}latest?base=${currency.convertFrom}`
     return fetch(requestedURL).
     then(response => response.json()).
@@ -69,7 +59,7 @@ function changeBase() {
     if (currency.convertTo.includes(currency.convertFrom)) {
         currency.convertTo.splice(currency.convertTo.indexOf(currency.convertFrom), 1);
     }
-    render();
+    fetchAPIData();
 }
 
 function addFlashError() {
@@ -222,6 +212,7 @@ function charts() {
 /* render */
 
 function render() {
+
     showConfigurationSelectionsPanel();
     console.log('rendering');
     console.log(currency);
@@ -237,4 +228,6 @@ function render() {
         makeBaseCurrencySelectionOption(baseSelect, rate);
         makeComparisonCurrencySelectionOption(convertSelect, rate);
     }
+    charts();
+
 }
